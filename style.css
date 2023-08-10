@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;1,600&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+:root {
+  --colorDark1: #112d4e;
+  --colorDark2: #3f72af;
+  --colorLight1: #dbe2ef;
+  --colorlight2: #f9f7f7;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow:hidden;
+  color: var(--colorlight2);
+  background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+}
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+.tab-container {
+  width: 90%;
+  max-width: 550px; 
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.tab {
+  cursor: pointer;
+  font-size: 0.875rem;
+  letter-spacing: 1.75px;
+  padding: 5px 8px;
+}
+
+.tab.current-tab {
+  background-color: rgba(219, 226, 239, 0.5);
+  border-radius: 4px;
+}
+
+.weather-container {
+  margin-block:2rem;
+
+}
+
+.btn {
+  all: unset;
+  background-color: var(--colorDark2);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.grant-location-container {
+    display: none;
+}
+.grant-location-container.active {
+  display: flex;
+}
+.grant-location-container img {
+  margin-bottom: 1rem;
+}
+.grant-location-container p:first-of-type {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.grant-location-container p:last-of-type {
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.75px;
+}
+
+.loading-container {
+  display: none;
+}
+.loading-container.active {
+  display: flex;
+}
+.loading-container p {
+  text-transform: uppercase;
+}
+.user-info-container {
+  display: none;
+}
+.user-info-container.active {
+  display: flex;
+}
+.name {
+  display: flex;
+  align-items: center;
+  gap: 0 0.5rem;
+  margin-bottom: 1rem;
+}
+.user-info-container p {
+  font-size: 1.25rem;
+  font-weight: 200;
+}
+.user-info-container img {
+  width: 90px;
+  height: 90px;
+}
+.name p {
+  font-size: 2rem;
+}
+.name img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.user-info-container p[data-temp]{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.userInfoContainer p[data-weatherDesc] {
+  text-transform: capitalize;
+}
+.parameter-container{
+    display: flex;
+    justify-content: center;
+    gap:10px 20px;
+    flex-wrap: wrap;
+    margin:1rem auto 0; 
+    width: 100%;
+}
+.parameter{
+    width: 45%;
+    max-width: 200px;
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 5px;
+    padding:0.75rem;
+    gap:5px 0 ;
+    align-items:center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.parameter img{
+    width: 40px;
+    height: 40px;
+
+}
+.parameter p:first-of-type{
+    text-transform: uppercase;
+    font-size:1.15rem;
+    font-weight: 600;
+}
+.parameter p:last-of-type{
+    font-size: 1rem;
+    font-weight:200;
+}
+.form-container{
+    display: none;
+    width: 90%;
+    max-width: 550px;
+    margin:0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom:3rem;
+}
+.form-container.active{
+    display:flex;
+}
+.form-container input{
+    all:unset;
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+    width:calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+}
+.form-container input::placeholder{
+    color:rgba(255,255,255,0.7);
+}
+.form-container input:focus{
+ outline:3px solid rgba(255,255,255,0.7);
+}
+
+.form-container .btn{
+    padding:unset;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    margin-bottom: 1px;
+}
+
+.not-found-section{
+  display: none;
+}
+.not-found-section.active{
+  display: flex;
+}
+.not-found-section img{
+    width:100%;
+    max-width:200px;
+    object-fit: cover;
+}
+.not-found-section p{
+  text-transform: capitalize;
+  text-align: center;
+}

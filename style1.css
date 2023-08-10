@@ -1,0 +1,56 @@
+@media (max-width: 400px) {
+.tab-container{
+    margin-top:1rem;
+}
+  .parameter-container {
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .parameter {
+    padding:0.5rem;
+    gap:3px;
+  }
+  .parameter p:first-of-type {
+    font-size: 1rem;
+  }
+  .parameter p:last-of-type {
+    font-size: 0.875rem;
+  }
+  .name{
+    margin-bottom:0.5rem;
+  }
+  .user-info-container p {
+    font-size: 1rem;
+  }
+  .user-info-container img {
+    width: 50px;
+    height: 50px;
+  }
+  .name p {
+    font-size: 1.5rem;
+  }
+  .name img {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .user-info-container p[data-temp]{
+      font-size: 1rem;
+  }
+
+  .form-container{
+    margin-bottom: 0.875rem;;
+  }
+  .form-container input{
+    height: 30px;
+  }
+  .form-container .btn{
+    height: 30px;
+    width: 30px;
+  }
+  .weather-container{
+margin-block:1rem;
+  }
+
+}
