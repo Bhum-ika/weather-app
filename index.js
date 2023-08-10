@@ -78,6 +78,7 @@ async function fetchUserWeatherInfo(coordinates){
      }catch(err){
       loadingscreen.classList.remove("active"); 
       errorContainer.classList.add("active");
+      errorImg.style.display="none";
       errorText.innerText=`Error:${err?.message}`;
       errorButton.style.display="block";
       errorButton.addEventListener("click",fetchUserWeatherInfo);
@@ -139,6 +140,7 @@ async function fetchSearchWeatherInfo(searchInfo){
  loadingscreen.classList.add("active");
  userInfoContainer.classList.remove("active");
  grantAccessContainer.classList.remove("active");
+ errorContainer.classList.remove("active"); 
 
  try{
  const response=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchInfo}&appid=${API_KEY}`);
